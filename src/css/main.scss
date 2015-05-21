@@ -3,10 +3,12 @@
 $arial : "arial",helvetica,sans-serif;
 
 $orange:#F26533;
-$green:#77AD43;
+$orangeMenu:#f26531;
+$green: #ADC537;
+$lightGreen:#c2f88e;
 $white: #fff;
 $grey:#5e5e5e;
-$menubg:#F3F3F3;
+$menuBg:#F3F3F3;
 
 
 p {font:12px/1.2em $arial; font-weight: 300;}
@@ -18,6 +20,38 @@ body {font:12px/1.2em $arial; color:$grey;background:$white;}
 
 .container {position:relative;overflow:hidden;max-width:1000px; padding:0;}
 
+.green {color: $green;}
+.light-green{color: $lightGreen;}
+.center {text-align: center;}
+
+@mixin overlay(){
+    &:hover{
+        &::after{background: rgba(0,0,0,0);transition:all 0.5s ease;}
+    }
+    &::after{
+        content: "";
+        background: rgba(0,0,0,0.6);
+        width: 100%;
+        height: 100%;
+        float: left;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+@mixin triangle($color){
+    &::after{
+        content: " ";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 5px 10px 5px;
+        position: absolute;
+        top: -10px;
+        left: 45%;
+        border-color: transparent transparent $color transparent;
+    }
+}
 header{
     .share {height: 40px;margin-top: 30px;}
     #main-nav {margin-top: 30px;
@@ -45,6 +79,7 @@ header{
                     font-weight: bold;
                     padding: 22px 15px;
                     border-right: 1px solid #ccc;
+                    &:hover {color: $orange;}
                 } //a
                 li {
                     position:relative;
@@ -53,13 +88,13 @@ header{
                     padding:0;
                     transition: all 0.5s ease;
                     &.active , &.current-menu-item , &.current-menu-parent {
-                        background: $menubg;
+                        background: $menuBg;
                         a {
                             color:$grey;
                         }
                     }
                     &:hover a {
-                        color:#c57c36;text-decoration: none;
+                        color:$orange;text-decoration: none;
                     }
                     &:hover > ul {
 
@@ -73,18 +108,21 @@ header{
                     left:0;
                     background:none;
                     padding:0;
+                    z-index: 9999;
                     li {
                         background: $orange;
                         float:none;
                         width:200px;
-                        background:rgba(0,0,0,0.8);
-                        &:hover {background:darken(rgba(0,0,0,0.8), 20%);}
+                        &:nth-child(2){
+                            background: $orangeMenu;
+                        }
                     }
                     a {
                         line-height:120%;
                         padding:10px 15px;
                         color:$white !important;
-                        &:hover {color:$orange !important;}
+                        border-bottom: 1px dotted $white;
+                        &:hover{color: $white;}
                     }
                     ul {
                         top:0;
@@ -95,8 +133,29 @@ header{
         }//nav
     }
 }//header
+footer {
+    background: #ccc;
+    padding: 20px 30px;
+    padding-bottom: 40px;
+    position: relative;
+    &:before {
+        background: url(../img/footer_line.png) repeat-x left bottom;
+        content: "";
+        width: 100%;
+        height: 23px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    .sitemap, .copy {margin-top: 10px;margin-left: 6.7%;
+        li {
+            a { text-transform: uppercase;color: black;padding: 0px 5px;margin: 10px 0;border-right: 1px solid black;}
+            &:last-child {a {border-right: none;}}
+        }
+    }
+}
 article{
-    .sharethis{width: 100%; height: 40px; padding:5px 20px;  background: $menubg;margin-top: -3px;
+    .sharethis{width: 100%; height: 40px; padding:5px 20px;  background: $menuBg;margin-top: -3px;
         .pshare {color: $grey;font-size: 14px; margin-top: 8px;margin-right: 10px;}
         .st_sharethis_large {padding:0 10px;border-right: 1px solid #717171;border-left: 1px solid #717171;height: 32px;}
     }//SHARETHIS
@@ -169,25 +228,138 @@ article{
             li{width: 24%;}
         }
     }
-}//article
-footer {
-    background: #ccc;
-    padding: 20px 30px;
-    padding-bottom: 40px;
-    position: relative;
-    &:before {
-        background: url(../img/footer_line.png) repeat-x left bottom;
-        content: "";
-        width: 100%;
-        height: 23px;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-    }
-    .sitemap, .copy {margin-top: 10px;margin-left: 6.7%;
-        li {
-            a { text-transform: uppercase;color: black;padding: 0px 5px;margin: 10px 0;border-right: 1px solid black;}
-            &:last-child {a {border-right: none;}}
+    .article-menu{
+        ul {
+            background: $menuBg;
+            float: left;
+            padding: 0 7.8%;
+            width: 100%;
+            z-index: 1;
+            position: relative;
+            margin: 0;
+            box-shadow: 0 4px 5px #333;
+            li {
+                position: relative;
+                padding: 0;
+                float: left;
+                height: 77px;
+                &.active{
+                        a{
+                            &::after{background: rgba(0,0,0,0);}
+                        }
+                    }
+                a{
+                    float: left;
+                    @include overlay();
+                }
+                div {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    color: $white;
+                    font-size: 16px;
+                    padding: 5px 10px;
+                    z-index: 1;
+                    @include triangle($green);
+                }
+                .greenbg {background: $green;}
+            }
         }
     }
-}
+    .green-border{border-top: 36px solid $green;}
+    .the-article{
+
+        position: relative;
+        .article-bg {
+            position: relative;
+            z-index: 1;
+            left: 0;
+            top:0;
+            width: 100%;
+            height: auto;
+        }
+        h1 {color: $white;position: absolute;top:20px;font-size: 20px; left: 20px;z-index: 1;}
+        .video {
+            position: absolute;
+            right: 30px;
+            top:30px;
+            z-index: 2;
+        }
+        .the-video{position: relative;}
+        .man-details{
+            background: $green;
+            position: absolute;
+            z-index: 2;
+            padding:20px;
+            width: 30%;
+            bottom: 10px;
+            left: 0;
+            h2 {color: $white;font-size: 12px;font-weight: bold;margin: 0;
+                .light-green{color: #c2f88d;}
+            }
+        }
+        .video-thumbnail{
+            background: rgba(142,161,47,0.8);
+            position: absolute;
+            z-index: 2;
+            right: 0;
+            bottom: 0;
+            width: 70%;
+            ul {padding-left: 40px;
+                margin: 0;
+                li {padding: 10px;
+                    &.active{
+                        a{
+                            &::after{background: rgba(0,0,0,0);}
+                            .play-icon{display: none;}
+                        }
+                    }
+                    a{border:1px solid $white;float: left;position: relative;
+                        @include overlay();
+                        .play-icon{
+                            position: absolute;
+                            bottom: 10px;
+                            right: 10px;
+                            z-index: 1;
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+        .content{
+            padding: 20px 3%;
+            .summary {border-right: 3px solid #ccc;}
+        }
+    }
+    .about {
+        p {font-size: 14px;}
+        &.about-bg {
+            background: url(../img/about_glass_is_life_withsizzle_01.jpg) no-repeat center top;
+            width: 100%;
+            min-height: 450px;
+            background-size: cover;
+            padding: 40px 20px;
+            h1{font-size: 18px;color: $white;text-align: left;}
+        }
+        .about-posts{
+            width: 340px;
+            height: auto;
+            margin: 0 auto;
+            text-align: center;
+            .title{
+                margin-top: 15px;
+                background: $green;
+                color: $white;
+                font-size: 16px;
+                padding: 10px 0;
+                width: 340px;
+                text-align: center;
+            }
+        }
+    }//about
+    .links-we-like{
+        h2{color: $green;font-size: 20px;font-weight: bold;margin-bottom: 20px;margin-left: 10px;}
+    }
+}//article
