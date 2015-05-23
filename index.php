@@ -2,7 +2,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="sharethis">
-                        <!-- <div class="share-icon pull-right"><span class='pull-right st_sharethis_large' displayText='ShareThis'></span><div class="pull-right pshare"><b>SHARE THIS</b></div></div> -->
+                        <div class="share-icon pull-right"><span class='pull-right st_sharethis_large' displayText='ShareThis'></span><div class="pull-right pshare"><b>SHARE THIS</b></div></div>
                     </div>
                 </div>
             </div>

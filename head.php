@@ -17,9 +17,9 @@
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-<!-- <script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript">var switchTo5x=true;</script>
 <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-<script type="text/javascript">stLight.options({publisher: "c9a81680-606b-417e-907a-bff19ee75190", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script> -->
+<script type="text/javascript">stLight.options({publisher: "c9a81680-606b-417e-907a-bff19ee75190", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
 
 </head>
 <body>
@@ -33,8 +33,8 @@
                 </div>
                 <div class="col-md-4">
                     <div class="share">
-                        <!-- <iframe frameborder="0" style="margin-right :15px ;width:160px; float: left;height:20px;" src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com/glassislife&amp;send=true&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21"></iframe>
-                        <iframe frameborder="0" id="twitter-widget-0" scrolling="no" allowtransparency="true" src="http://platform.twitter.com/widgets/tweet_button.b169aa788731255dd55f1bb243b660e1.en.html#_=1431567427134&amp;count=horizontal&amp;dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http%3A%2F%2Fglassislife.com%2F&amp;related=glassislife&amp;size=m&amp;text=Glass%20Is%20Life%20%7C%20O-I%20%7C%20Honest%2C%20pure%2C%20iconic%20glass&amp;url=http%3A%2F%2Fglassislife.com" class="twitter-share-button twitter-tweet-button twitter-share-button twitter-count-horizontal" title="Twitter Tweet Button" data-twttr-rendered="true" style="float:left;width: auto; height: 20px;width: 90px;"></iframe> -->
+                        <iframe frameborder="0" style="margin-right :15px ;width:160px; float: left;height:20px;" src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com/glassislife&amp;send=true&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21"></iframe>
+                        <iframe frameborder="0" id="twitter-widget-0" scrolling="no" allowtransparency="true" src="http://platform.twitter.com/widgets/tweet_button.b169aa788731255dd55f1bb243b660e1.en.html#_=1431567427134&amp;count=horizontal&amp;dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http%3A%2F%2Fglassislife.com%2F&amp;related=glassislife&amp;size=m&amp;text=Glass%20Is%20Life%20%7C%20O-I%20%7C%20Honest%2C%20pure%2C%20iconic%20glass&amp;url=http%3A%2F%2Fglassislife.com" class="twitter-share-button twitter-tweet-button twitter-share-button twitter-count-horizontal" title="Twitter Tweet Button" data-twttr-rendered="true" style="float:left;width: auto; height: 20px;width: 90px;"></iframe>
                     </div>
                 </div>
             </div>
@@ -43,20 +43,22 @@
                     <div id="main-nav">
                         <nav id="primary-nav">
                             <ul class="list-inline list-unstyled">
-                                <li class="active"><a href="">home</a>
+                                <li class="active"><a href="index.php">home</a></li>
+                                <li><a href="taste.php">the case for glass</a>
                                     <ul class="sub-menu">
-                                        <li class=""><a href="http://oneanimation.com/about/">About</a></li>
-                                        <li class=""><a href="http://oneanimation.com/careers/">Careers</a></li>
+                                        <li class=""><a href="taste.php">taste</a></li>
+                                        <li class=""><a href="quality.php">quality</a></li>
+                                        <li class=""><a href="sustainability.php">sustainability</a></li>
+                                        <li class=""><a href="health.php">health</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="">the case for glass</a>
+                                <li><a href="about.php">about o-i</a>
                                     <ul class="sub-menu">
-                                        <li class=""><a href="http://oneanimation.com/about/">About</a></li>
-                                        <li class=""><a href="http://oneanimation.com/careers/">Careers</a></li>
+                                        <li class=""><a href="contactus.php">contact us</a></li>
+                                        <li class=""><a href="keycontacts.php">key contacts</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="">about o-i</a></li>
-                                <li><a href="">choose glass</a></li>
+                                <li><a href="http://chooseglass.glassislife.com/" target="_blank" class="green">choose glass</a></li>
                             </ul>
                         </nav>
                     </div> <!-- main nav -->

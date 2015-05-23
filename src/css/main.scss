@@ -9,19 +9,24 @@ $lightGreen:#c2f88e;
 $white: #fff;
 $grey:#5e5e5e;
 $menuBg:#F3F3F3;
+$black:#000;
+$quaColor:#d21c4d;
+$susColor:#1d819e;
+$heaColor:#aa54a0;
 
 
 p {font:12px/1.2em $arial; font-weight: 300;}
 a {transition: all 0.5s ease;color: $orange;
     &:hover , &:visited {color: darken($orange, 15%);text-decoration: none;}
 }
+h4{font-size: 16px; color: $black;font-weight: bold;}
 
 body {font:12px/1.2em $arial; color:$grey;background:$white;}
 
 .container {position:relative;overflow:hidden;max-width:1000px; padding:0;}
 
-.green {color: $green;}
-.light-green{color: $lightGreen;}
+*.green {color: $green !important;}
+*.light-green{color: $lightGreen !important;}
 .center {text-align: center;}
 
 @mixin overlay(){
@@ -67,7 +72,7 @@ header{
                 margin:0;
                 padding:0;
                 border-top:1px solid #EBEBEB;
-                height: 60px;
+                height: auto;
                 width: 100%;
                 a {
                     display:block;
@@ -90,15 +95,19 @@ header{
                     &.active , &.current-menu-item , &.current-menu-parent {
                         background: $menuBg;
                         a {
-                            color:$grey;
+                            color:$orangeMenu !important;
                         }
                     }
                     &:hover a {
                         color:$orange;text-decoration: none;
+
                     }
                     &:hover > ul {
 
                         display:block
+                    }
+                    &:last-child{
+                        a {border-right: 0;}
                     }
                 }//li
                 ul {
@@ -122,7 +131,8 @@ header{
                         padding:10px 15px;
                         color:$white !important;
                         border-bottom: 1px dotted $white;
-                        &:hover{color: $white;}
+                        background-position: 0 50%;
+                        &:hover{color:#FDB915 !important; background: url(../img/sub_menu_arrow.png) no-repeat left center;}
                     }
                     ul {
                         top:0;
@@ -237,12 +247,12 @@ article{
             z-index: 1;
             position: relative;
             margin: 0;
-            box-shadow: 0 4px 5px #333;
+            box-shadow: 0 5px 7px rgba(0,0,0,0.3);
             li {
                 position: relative;
                 padding: 0;
                 float: left;
-                height: 77px;
+                height: 84px;
                 &.active{
                         a{
                             &::after{background: rgba(0,0,0,0);}
@@ -259,17 +269,41 @@ article{
                     width: 100%;
                     color: $white;
                     font-size: 16px;
-                    padding: 5px 10px;
+                    padding: 8px 10px;
                     z-index: 1;
                     @include triangle($green);
+                    background: $green;
                 }
                 .greenbg {background: $green;}
             }
+            li:nth-child(2){
+                div {
+                    background: $quaColor;
+                    @include triangle($quaColor);
+                }
+            }
+            li:nth-child(3){
+                div {
+                    background: $susColor;
+                    @include triangle($susColor);
+                }
+            }
+            li:nth-child(4){
+                div {
+                    background: $heaColor;
+                    @include triangle($heaColor);
+                }
+            }
         }
     }
-    .green-border{border-top: 36px solid $green;}
+    @mixin man-details($color-md) {
+        background: $color-md;
+        h2 {.light-color{color: lighten($color-md, 30%);}}
+    }
+    @mixin video-bg($video-bg){
+        background: rgba($video-bg,0.7);
+    }
     .the-article{
-
         position: relative;
         .article-bg {
             position: relative;
@@ -288,19 +322,18 @@ article{
         }
         .the-video{position: relative;}
         .man-details{
-            background: $green;
             position: absolute;
             z-index: 2;
             padding:20px;
             width: 30%;
             bottom: 10px;
             left: 0;
-            h2 {color: $white;font-size: 12px;font-weight: bold;margin: 0;
-                .light-green{color: #c2f88d;}
-            }
+            h2 {color: $white;font-size: 12px;font-weight: bold;margin: 0;line-height: 1.6em;}
+            @include man-details($green);
         }
+
         .video-thumbnail{
-            background: rgba(142,161,47,0.8);
+            @include video-bg($green);
             position: absolute;
             z-index: 2;
             right: 0;
@@ -330,8 +363,26 @@ article{
         }
         .content{
             padding: 20px 3%;
-            .summary {border-right: 3px solid #ccc;}
+            .summary {border-right: 3px solid #ccc;
+                .colored{color: $green;}
+            }
         }
+    }//the article
+    .taste-theme{border-top: 36px solid $green;}
+    .quality-theme{border-top: 36px solid $quaColor;
+        .man-details{@include man-details($quaColor);}
+        .video-thumbnail{@include video-bg($quaColor);}
+        .colored{color: $quaColor !important;}
+    }
+    .sustainability-theme{border-top: 36px solid $susColor;
+        .man-details{@include man-details($susColor);}
+        .video-thumbnail{@include video-bg($susColor);}
+        .colored{color: $susColor !important;}
+    }
+    .health-theme{border-top: 36px solid $heaColor;
+        .man-details{@include man-details($heaColor);}
+        .video-thumbnail{@include video-bg($heaColor);}
+        .colored{color: $heaColor !important;}
     }
     .about {
         p {font-size: 14px;}
@@ -361,5 +412,63 @@ article{
     }//about
     .links-we-like{
         h2{color: $green;font-size: 20px;font-weight: bold;margin-bottom: 20px;margin-left: 10px;}
+    }
+    .left-sidebar {
+        h1 {font-size: 15px; font-weight: bold;margin: 20px 0 10px 40px;color: $grey;}
+    }
+    .contact-us{
+        .checkbox input {margin-top: 0;}
+        label{font-weight: normal;}
+        .btn-submit{border:none;background: none;padding: none;position: relative;
+            p{
+                color: $white;font-size: 15px;font-weight: bold;position: absolute;right: 31px;top: 10px;
+            }
+        }
+    }
+    .right-sidebar{border-left: 3px solid #ccc;position: relative;
+        &::before{
+            border-left: 3px solid #ccc;
+            content: "";
+            height: 1200px;
+            left: -3px;
+            position: absolute;
+            top: 0;
+            width: 1px;
+            z-index: -1;
+        }
+        .box-green{
+            width: 100%;
+            background: $green;
+            padding: 10px;
+            min-height: 200px;
+            p {color: $white;font-size: 15px;font-weight: bold;}
+        }
+    }
+    .key-contacts {
+        .separator{background: url(../img/seprator.png) repeat-x ;width: 100%;height: 17px;}
+        .world-map{
+            h4{margin: 20px 10px;}
+            .the-map{margin-top: 20px; img{width: 100%;}}
+            h5{color: #888; font-weight: bold;margin: 20px 10px;}
+            details{margin-left: 30px;
+                p{color: #888;}
+                a{color: $green !important;}
+            }
+            .pdf-list{
+                li {line-height: 3.7rem;
+                    a {position: relative;padding-left: 30px;color: #77ae43;font-weight: bold;font-size: 14px;
+                        &::before{
+                            content: "";
+                            background: url(../img/icon-pdf.png) no-repeat center left;
+                            width: 24px;
+                            height: 31px;
+                            position: absolute;
+                            left: 0;
+                            top: -10px;
+                        }
+                    }
+                }
+            }
+        }//world-map
     }
 }//article
