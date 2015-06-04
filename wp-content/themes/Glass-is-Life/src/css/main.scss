@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import url(fullpage-menu.css);
 
 $arial : "arial",helvetica,sans-serif;
 
@@ -185,10 +186,10 @@ article{
                     bottom: 10px;
                     right: 0;
                     height: 50px;
-                    width: 200px;
+                    width: 170px;
                     z-index: 5;
-                    img {height: 100%; width: auto;float: left;}
-                    p {float: left;line-height: 4.4em;margin-right: 11px;
+                    img {height: 100%; width: auto;float: right;}
+                    p {float: left;line-height: 4.4em;margin-right: 11px; color: $white;
                     }
                 }
             }
@@ -276,19 +277,19 @@ article{
                 }
                 .greenbg {background: $green;}
             }
-            li:nth-child(2){
+            li.kualitas{
                 div {
                     background: $quaColor;
                     @include triangle($quaColor);
                 }
             }
-            li:nth-child(3){
+            li.kelestarian{
                 div {
                     background: $susColor;
                     @include triangle($susColor);
                 }
             }
-            li:nth-child(4){
+            li.kesehatan{
                 div {
                     background: $heaColor;
                     @include triangle($heaColor);
@@ -303,6 +304,9 @@ article{
     @mixin video-bg($video-bg){
         background: rgba($video-bg,0.7);
     }
+    @mixin article-h1($color-h1) {
+        h1{color: $color-h1;}
+    }
     .the-article{
         position: relative;
         .article-bg {
@@ -313,7 +317,7 @@ article{
             width: 100%;
             height: auto;
         }
-        h1 {color: $white;position: absolute;top:20px;font-size: 20px; left: 20px;z-index: 1;}
+        h1 {position: absolute;top:20px;font-size: 20px; left: 20px;z-index: 1;}
         .video {
             position: absolute;
             right: 30px;
@@ -368,18 +372,23 @@ article{
             }
         }
     }//the article
-    .taste-theme{border-top: 36px solid $green;}
+    .taste-theme{border-top: 36px solid $green;
+        @include article-h1($green);
+    }
     .quality-theme{border-top: 36px solid $quaColor;
+        @include article-h1($quaColor);
         .man-details{@include man-details($quaColor);}
         .video-thumbnail{@include video-bg($quaColor);}
         .colored{color: $quaColor !important;}
     }
     .sustainability-theme{border-top: 36px solid $susColor;
+        @include article-h1($susColor);
         .man-details{@include man-details($susColor);}
         .video-thumbnail{@include video-bg($susColor);}
         .colored{color: $susColor !important;}
     }
     .health-theme{border-top: 36px solid $heaColor;
+        @include article-h1($heaColor);
         .man-details{@include man-details($heaColor);}
         .video-thumbnail{@include video-bg($heaColor);}
         .colored{color: $heaColor !important;}

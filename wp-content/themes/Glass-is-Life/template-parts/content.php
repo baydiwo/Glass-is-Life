@@ -36,6 +36,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php glass_is_life_entry_footer(); ?>
+		<?php //glass_is_life_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

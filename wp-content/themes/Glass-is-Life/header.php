@@ -43,6 +43,22 @@
 </head>
 <body <?php body_class(); ?>>
     <div class="container">
+        <div class="sidemenu">
+          <ul class="fm-first-level">
+            <li><a href="#menu1">Menu</a></li>
+            <li><a href="#menu2">Tentang Kaca</a></li>
+          </ul>
+          <nav id="menu1" class="active">
+            <?php mobile_main_nav(); ?>
+            <!-- <a href="http://www.bucketlistly.com/achievements/bungee-off-victoria-falls-107918">
+              <span class="subtitle">Finally, I decided to take on my first bungee jump ever (!) and I chose Victoria Falls..</span>
+              Bungee Off Victoria Falls
+            </a> -->
+          </nav>
+          <nav id="menu2">
+            <?php mobile_second_nav(); ?>
+          </nav>
+        </div>
         <header>
             <div class="row">
                 <div class="col-md-8">
@@ -61,27 +77,22 @@
                 <div class="col-md-12">
                     <div id="main-nav">
                         <nav id="primary-nav">
-                            <ul class="list-inline list-unstyled">
-                                <li class="active"><a href="index.php">home</a></li>
-                                <li><a href="taste.php">the case for glass</a>
-                                    <ul class="sub-menu">
-                                        <li class=""><a href="taste.php">taste</a></li>
-                                        <li class=""><a href="quality.php">quality</a></li>
-                                        <li class=""><a href="sustainability.php">sustainability</a></li>
-                                        <li class=""><a href="health.php">health</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="about.php">about o-i</a>
-                                    <ul class="sub-menu">
-                                        <li class=""><a href="contactus.php">contact us</a></li>
-                                        <li class=""><a href="keycontacts.php">key contacts</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="http://chooseglass.glassislife.com/" target="_blank" class="green">choose glass</a></li>
-                            </ul>
-                            <?php //wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+                            <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' , 'menu_class' => 'list-inline list-unstyled', ) ); ?>
                         </nav>
                     </div> <!-- main nav -->
+                    <div id="mobile-nav">
+                        <div class="custom-navbar"><a  class="fm-button" href="#">Menu</a>
+                        <a id="open-menu" class="btn-normal btn fm-button" href="#">
+                            <nav class="navbar-default">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                <span class="sr-only">Menu</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                              </button></nav>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>

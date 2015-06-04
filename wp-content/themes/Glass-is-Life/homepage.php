@@ -37,7 +37,7 @@ get_header(); ?>
                                 </div>
                                 <div class="linefront"></div>
                                 <div class="lineback"></div>
-                                <div class="watch"><p>WATCH HIS VIDEO</p><a href=""><img src="<?php echo get_template_directory_uri(); ?>/assets/img/play_icon_green.gif"></a></div>
+                                <div class="watch"><p>LIHAT VIDEO</p><a href=""><img src="<?php echo get_template_directory_uri(); ?>/assets/img/play_icon_rasa.gif"></a></div>
                             </div>
                         </li>
                         <li <?php if(get_field('quality_image') == null){echo 'class="display-none"';} ?> >
@@ -53,7 +53,7 @@ get_header(); ?>
                                 </div>
                                 <div class="linefront"></div>
                                 <div class="lineback"></div>
-                                <div class="watch"><p>WATCH HIS VIDEO</p><a href=""><img src="<?php echo get_template_directory_uri(); ?>/assets/img/play_icon_green.gif"></a></div>
+                                <div class="watch"><p>LIHAT VIDEO</p><a href=""><img src="<?php echo get_template_directory_uri(); ?>/assets/img/play_icon_kualitas.gif"></a></div>
                             </div>
                         </li>
                         <li <?php if(get_field('sus_image') == null){echo 'class="display-none"';} ?> >
@@ -69,7 +69,7 @@ get_header(); ?>
                                 </div>
                                 <div class="linefront"></div>
                                 <div class="lineback"></div>
-                                <div class="watch"><p>WATCH HIS VIDEO</p><a href=""><img src="<?php echo get_template_directory_uri(); ?>/assets/img/play_icon_green.gif"></a></div>
+                                <div class="watch"><p>LIHAT VIDEO</p><a href=""><img src="<?php echo get_template_directory_uri(); ?>/assets/img/play_icon_kelestarian.gif"></a></div>
                             </div>
                         </li>
                         <li <?php if(get_field('health_image') == null){echo 'class="display-none"';} ?> >
@@ -85,7 +85,7 @@ get_header(); ?>
                                 </div>
                                 <div class="linefront"></div>
                                 <div class="lineback"></div>
-                                <div class="watch"><p>WATCH HIS VIDEO</p><a href=""><img src="<?php echo get_template_directory_uri(); ?>/assets/img/play_icon_green.gif"></a></div>
+                                <div class="watch"><p>LIHAT VIDEO</p><a href=""><img src="<?php echo get_template_directory_uri(); ?>/assets/img/play_icon_kesehatan.gif"></a></div>
                             </div>
                         </li>
                     <?php endwhile; ?>

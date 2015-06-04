@@ -10,9 +10,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 }
 ?>
 <div class="col-md-5">
-    <summary>
-        WE LOVE GLASS. IT STARTS LIFE AS SAND, GOES THROUGH FIRE AND MAGICALLY BECOMES A NATURAL, BEAUTIFUL MATERIAL THAT SAFEGUARDS YOUR FOOD AND DRINK & IS GOOD FOR THE ENVIRONMENT. CHECK IT OUT AND IF YOU LOVE GLASS LIKE WE DO, SPREAD THE WORD.
-    </summary>
+    <?php dynamic_sidebar( 'Home right sidebar' ); ?>
     <div class="rightpost">
         <div class="title">FOLLOW US</div>
         <ul class="list-inline">
@@ -24,6 +22,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
     </div>
     <div class="rightpost">
         <div class="title">sharing glass</div>
+        <?php echo do_shortcode("[custom-facebook-feed type=events pastevents=true]" );; ?>
     </div>
 </div> <!-- right side -->
 

@@ -1,25 +1,20 @@
 $(document).ready(function(){
-    $('#shows-slider').bxSlider({
-        mode: 'fade',
-        easing: 'swing',
-        pagerCustom: '#slide-pager',
-        // pagerType: 'short',
-        // nextText: '<img src="assets/img/arrow-right.png" alt="Next">',
-        // prevText: '<img src="assets/img/arrow-left.png" alt="Previous">'
-    });
-    $(".vid").colorbox({iframe:true, innerWidth:580, innerHeight:300 , maxWidth:'95%', maxHeight:'95%'});
-    // $('#mobile-menu').sidr({
-    //     side: 'right'
-    // });
+    if ($('#articlemenu li').length < 4) {
+        $('#articlemenu').css('padding', '0 19.3%');
+    }
+    if ($('#articlemenu li').length < 3) {
+        $('#articlemenu').css('padding', '0 29.4%');
+    }
 
-    $("#sidr").slideReveal({
-        width: 200,
-        push: false,
-        position: "right",
-        speed: 500,
-        trigger: $("#mobile-menu"),
-        // autoEscape: false,
-        top: 0
+    $("#open-menu").click(function() {
+        $(".sidemenu").openMenu();
+        return true;
     });
-
+    $(".sidemenu").fullpageMenu({
+        //openButton: "Menu",        // This option allows you to define the content of the open menu button. The default value is "Menu"
+        //closeButton: "Close X",    // This option allows you to define the content of the close menu button. The default value is "Close X"
+        animationSpeed: 100,       // This option lets you control the speed of the animation of each navigation items. The option accepts milliseconds. The default value is 100.
+        autoNumber: false,          // This option lets you enable/disable to automatic numbering on menu items. The default value is true.
+        animation: "fadeInLeft"    // This option lets you define what type of animation you want. Available options are "fadeInLeft", "fadeInRight", "fadeInUp" and "fadeInDown".
+    });
 });

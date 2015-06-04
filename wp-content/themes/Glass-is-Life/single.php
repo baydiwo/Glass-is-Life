@@ -1,32 +1,35 @@
 <?php
 /**
- * The template for displaying all single posts.
+ * * The template for displaying all shows posts.
  *
  * @package Glass-is-Life
  */
 
 get_header(); ?>
+    <?php include "inc/article-menu.php" ?>
+    <div class="row">
+        <div class="col-md-12">
+        <?php if ( have_posts() ) : ?>
+            <?php while ( have_posts() ) : the_post(); ?>
+                    <?php
+                    if(in_category('rasa' )){
+                        get_template_part('single','rasa');
+                    }
+                    if(in_category('kualitas' )){
+                        get_template_part('single','kualitas');
+                    }
+                    if(in_category('kelestarian' )){
+                        get_template_part('single','kelestarian');
+                    }
+                    if(in_category('kesehatan' )){
+                        get_template_part('single','kesehatan');
+                    }
+                     ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
-		<?php while ( have_posts() ) : the_post(); ?>
-
-			<?php get_template_part( 'template-parts/content', 'single' ); ?>
-
-			<?php the_post_navigation(); ?>
-
-			<?php
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-			?>
-
-		<?php endwhile; // End of the loop. ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php get_sidebar(); ?>
+            <?php endwhile; ?>
+        <?php else : ?>
+            <?php get_template_part( 'template-parts/content', 'none' ); ?>
+        <?php endif; wp_reset_postdata(); ?>
+        </div>
+    </div>
 <?php get_footer(); ?>
