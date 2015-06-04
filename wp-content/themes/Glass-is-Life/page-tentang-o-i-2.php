@@ -22,7 +22,8 @@ get_header(); ?>
                 <div class="col-md-12">
                     <div class="about text-center about-bg">
                         <h1><?php the_title(); ?></h1>
-                        <iframe width="560" align="center" height="315" src="<?php the_field('youtube_link') ?>" frameborder="0" allowfullscreen></iframe>
+                        <iframe class="desktop" width="560" align="center" height="315" src="<?php the_field('youtube_link') ?>" frameborder="0" allowfullscreen></iframe>
+                        <iframe class="mobile" width="100%" align="center" height="auto" src="<?php the_field('youtube_link') ?>" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>

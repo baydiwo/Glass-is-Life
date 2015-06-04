@@ -43,30 +43,14 @@
 </head>
 <body <?php body_class(); ?>>
     <div class="container">
-        <div class="sidemenu">
-          <ul class="fm-first-level">
-            <li><a href="#menu1">Menu</a></li>
-            <li><a href="#menu2">Tentang Kaca</a></li>
-          </ul>
-          <nav id="menu1" class="active">
-            <?php mobile_main_nav(); ?>
-            <!-- <a href="http://www.bucketlistly.com/achievements/bungee-off-victoria-falls-107918">
-              <span class="subtitle">Finally, I decided to take on my first bungee jump ever (!) and I chose Victoria Falls..</span>
-              Bungee Off Victoria Falls
-            </a> -->
-          </nav>
-          <nav id="menu2">
-            <?php mobile_second_nav(); ?>
-          </nav>
-        </div>
         <header>
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-8 col-xs-10">
                     <div class="logo">
                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/header_logo.png" alt="Glas is Life" class="img-responsive"></a>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-xs-12">
                     <div class="share">
                         <iframe frameborder="0" style="margin-right :15px ;width:160px; float: left;height:20px;" src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com/glassislife&amp;send=true&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21"></iframe>
                         <iframe frameborder="0" id="twitter-widget-0" scrolling="no" allowtransparency="true" src="http://platform.twitter.com/widgets/tweet_button.b169aa788731255dd55f1bb243b660e1.en.html#_=1431567427134&amp;count=horizontal&amp;dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http%3A%2F%2Fglassislife.com%2F&amp;related=glassislife&amp;size=m&amp;text=Glass%20Is%20Life%20%7C%20O-I%20%7C%20Honest%2C%20pure%2C%20iconic%20glass&amp;url=http%3A%2F%2Fglassislife.com" class="twitter-share-button twitter-tweet-button twitter-share-button twitter-count-horizontal" title="Twitter Tweet Button" data-twttr-rendered="true" style="float:left;width: auto; height: 20px;width: 90px;"></iframe>
@@ -81,16 +65,13 @@
                         </nav>
                     </div> <!-- main nav -->
                     <div id="mobile-nav">
-                        <div class="custom-navbar"><a  class="fm-button" href="#">Menu</a>
-                        <a id="open-menu" class="btn-normal btn fm-button" href="#">
-                            <nav class="navbar-default">
+                        <div class="custom-navbar"><a  class="fm-button" href="#"><nav class="navbar-default">
                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                                 <span class="sr-only">Menu</span>
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
-                              </button></nav>
-                            </a>
+                              </button></nav></a>
                         </div>
                     </div>
                 </div>

@@ -20,6 +20,22 @@
             </div>
         </footer>
     </div>
+    <div class="sidemenu">
+        <ul class="fm-first-level">
+            <li><a href="#menu1">Menu</a></li>
+            <li><a href="#menu2">Tentang Kaca</a></li>
+        </ul>
+        <nav id="menu1" class="active">
+            <?php mobile_main_nav(); ?>
+        <!-- <a href="http://www.bucketlistly.com/achievements/bungee-off-victoria-falls-107918">
+        <span class="subtitle">Finally, I decided to take on my first bungee jump ever (!) and I chose Victoria Falls..</span>
+        Bungee Off Victoria Falls
+        </a> -->
+        </nav>
+        <nav id="menu2">
+            <?php mobile_second_nav(); ?>
+        </nav>
+    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
