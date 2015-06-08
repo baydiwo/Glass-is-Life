@@ -186,7 +186,7 @@ function custom_main_nav() {
             //$menu_list .= '><a href="'. $url .'">'. $title .'</a>' ."\n";
             $menu_list .= '">
             <a href="'.$url.'">
-                <img src="'.get_template_directory_uri().'/assets/img/'.$title.'-tab.jpg"><div>'.$title.'</div>
+                <img src="'.get_template_directory_uri().'/assets/img/'.strtolower($title).'-tab.jpg"><div>'.$title.'</div>
             </a>
             '."\n";
             $menu_list .= '</li>'."\n";

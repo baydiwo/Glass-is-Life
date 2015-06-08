@@ -11,7 +11,8 @@
         <img src="<?php the_field('background_image') ?>" class="img-responsive article-bg">
         <h1><b>KESEHATAN</b></h1>
         <div class="video">
-            <iframe width="560" height="315" src="<?php the_field('video') ?>" frameborder="0" allowfullscreen></iframe>
+            <iframe class="desktop" width="560" height="315" src="<?php the_field('video') ?>" frameborder="0" allowfullscreen></iframe>
+            <iframe class="mobile" width="100%" height="auto" src="<?php the_field('video') ?>" frameborder="0" allowfullscreen></iframe>
         </div>
         <div class="man-details">
             <h2>

@@ -7,9 +7,9 @@
                     <div class="sitemap pull-left">
                         <ul class="list-inline list-unstyled">
                             <li><a href="">site map</a></li>
-                            <li><a href="">privacy policy</a></li>
-                            <li><a href="">terms of use</a></li>
-                            <li><a href="">o-i.com</a></li>
+                            <li><a href="<?php echo home_url() ?>/privacy-policy/">privacy policy</a></li>
+                            <li><a href="<?php echo home_url() ?>/terms-of-use/">terms of use</a></li>
+                            <li><a href="http://O-I.com" target="_blank">o-i.com</a></li>
                         </ul>
                     </div>
                     <div class="copy pull-right">
@@ -20,6 +20,8 @@
             </div>
         </footer>
     </div>
+
+    <!-- responsive menu -->
     <div class="sidemenu">
         <ul class="fm-first-level">
             <li><a href="#menu1">Menu</a></li>

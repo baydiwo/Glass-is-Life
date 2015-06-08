@@ -45,17 +45,17 @@
     <div class="container">
         <header>
             <div class="row">
-                <div class="col-md-8 col-xs-10">
+                <div class="col-md-7 col-xs-10">
                     <div class="logo">
                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/header_logo.png" alt="Glas is Life" class="img-responsive"></a>
                     </div>
                 </div>
-                <div class="col-md-4 col-xs-12">
+                <!-- <div class="col-md-4 col-xs-12">
                     <div class="share">
                         <iframe frameborder="0" style="margin-right :15px ;width:160px; float: left;height:20px;" src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com/glassislife&amp;send=true&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21"></iframe>
                         <iframe frameborder="0" id="twitter-widget-0" scrolling="no" allowtransparency="true" src="http://platform.twitter.com/widgets/tweet_button.b169aa788731255dd55f1bb243b660e1.en.html#_=1431567427134&amp;count=horizontal&amp;dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http%3A%2F%2Fglassislife.com%2F&amp;related=glassislife&amp;size=m&amp;text=Glass%20Is%20Life%20%7C%20O-I%20%7C%20Honest%2C%20pure%2C%20iconic%20glass&amp;url=http%3A%2F%2Fglassislife.com" class="twitter-share-button twitter-tweet-button twitter-share-button twitter-count-horizontal" title="Twitter Tweet Button" data-twttr-rendered="true" style="float:left;width: auto; height: 20px;width: 90px;"></iframe>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="row">
                 <div class="col-md-12">

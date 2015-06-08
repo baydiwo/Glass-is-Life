@@ -23,6 +23,25 @@ $imp : !important;
                 img , .title {width: 100%;}
             }
         }
+        .article-menu {
+            ul {padding: 0 $imp;
+                li {width: 50%;}
+            }
+        }
+        .the-article{
+            .the-video {
+                position: relative;
+                padding: 10px;
+                .article-bg {display: none;}
+                h1 , .video , .man-details , .video-thumbnail {position: relative;left: auto;top: auto;right: auto;bottom: auto;}
+                .man-details, .video-thumbnail {width: 100%;}
+            }
+            .content {
+                .summary {
+                    border-right: none; border-bottom: 3px solid #ccc; margin-bottom: 20px;
+                }
+            }
+        }
     }//article
 }
 

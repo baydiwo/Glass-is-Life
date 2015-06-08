@@ -29,4 +29,10 @@ $(document).ready(function(){
         autoNumber: false,          // This option lets you enable/disable to automatic numbering on menu items. The default value is true.
         animation: "fadeInLeft"    // This option lets you define what type of animation you want. Available options are "fadeInLeft", "fadeInRight", "fadeInUp" and "fadeInDown".
     });
+
+    $(".taste-youtube").colorbox({iframe:true, innerWidth:580, innerHeight:300 , maxWidth:'95%', maxHeight:'95%'});
+    $(".quality-youtube").colorbox({iframe:true, innerWidth:580, innerHeight:300 , maxWidth:'95%', maxHeight:'95%'});
+    $(".sus-youtube").colorbox({iframe:true, innerWidth:580, innerHeight:300 , maxWidth:'95%', maxHeight:'95%'});
+    $(".health-youtube").colorbox({iframe:true, innerWidth:580, innerHeight:300 , maxWidth:'95%', maxHeight:'95%'});
 });
+
