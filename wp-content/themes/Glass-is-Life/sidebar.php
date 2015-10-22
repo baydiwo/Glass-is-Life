@@ -14,7 +14,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
     <div class="rightpost">
         <div class="title">FOLLOW US</div>
         <ul class="list-inline">
-            <li><a target="_blank" href="https://www.facebook.com/pages/Glass-Is-Life-Indonesia/691351937659953"><img src="<?php echo get_template_directory_uri();?>/assets/img/FaceBookHome.png" class="img-responsive"></a></li>
+            <li><a target="_blank" href="http://www.facebook.com/GlassIsLife"><img src="<?php echo get_template_directory_uri();?>/assets/img/FaceBookHome.png" class="img-responsive"></a></li>
             <li><a target="_blank" href="https://twitter.com/GlassIsLifeID"><img src="<?php echo get_template_directory_uri();?>/assets/img/TwitterHome.png" class="img-responsive"></a></li>
             <li><a target="_blank" href="https://instagram.com/glassislife.id/"><img src="<?php echo get_template_directory_uri();?>/assets/img/instagram.jpg" class="img-responsive"></a></li>
             <!-- <li><a target="_blank" href=""><img src="<?php echo get_template_directory_uri();?>/assets/img/tumbleHome.png" class="img-responsive"></a></li> -->
